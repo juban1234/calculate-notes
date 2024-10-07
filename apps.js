@@ -48,7 +48,7 @@ function calculatenotes(event) {
     let result = ((nota1 * 0.3)+(nota2 * 0.3)+(nota3 * 0.4)).toFixed(1)
     // las comillas invertidad permiten colocar texto y opreciones 
     respone.style.color = "green"
-    respone.textContent = `SR/SRA/SRE ${username.value} su nota definitiva es: ${result}`  
+    respone.textContent = `${username.value} su nota definitiva es: ${result}`  
     validatenotes(result)
 }
 
@@ -69,7 +69,6 @@ function prediction(event) {
     event.preventDefault()
     let nota1 = Number(data1.value)
     let nota2 = Number(data2.value)
-    let result = ((3.5 - (nota1 * 0.3) - (nota2 * 0.3))/0.4).toFixed(1)
-
-    respone.textContent = `la nota minima que necesita para aprobar con 3.5 es de :  ${result}`
+    let result =( (3.5 - (nota1 * 0.3) - (nota2 * 0.3))/0.4).toFixed(1)
+    data3.value = result
 }
